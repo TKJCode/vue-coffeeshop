@@ -1,0 +1,38 @@
+@import './global.less';
+
+.accountManage {
+  .top-nav {
+    // 修改 vant样式
+    .van-nav-bar .van-icon,
+    .van-nav-bar__text {
+      color: @color;
+    }
+  }
+  .accountManage-list {
+    .cell-head {
+      height: 60px;
+        .head {
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          right: 0;
+      }
+    }
+    .uploader {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+    }
+  }
+  .desc {
+    min-height: 60px;
+    max-height: 100px;
+  }
+  .van-field__control {
+    color: #444;
+  }
+}

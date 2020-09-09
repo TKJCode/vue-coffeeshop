@@ -1,0 +1,80 @@
+@import '../global.less';
+
+.home {
+  position: fixed;
+  top: 0;
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+  background-color: #f3f4f5;
+}
+.home-content {
+  height: calc(~"100% - 163.04px");
+  .left-nav {
+    width: 100px;
+    height: 100%;
+    position: relative;
+    background-color: #f7f7f7;
+    overflow-y: auto; //出现滚动条
+    .nav-item {
+      height: 44px;
+      width: 100%;
+      text-align: center;
+      line-height: 44px;
+      font-size: 14px;
+      &.active {
+        background-color: #fff;
+        color: @color;
+        font-weight: 600;
+      }
+    }
+    .line {
+      width: 2px;
+      height: 34px;
+      background-color: @color;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: top 0.1s linear;
+    }
+  }
+  .right-content {
+    width: calc(~"100% - 100px");
+    height: 100%;
+    background-color: #fff;
+    overflow-y: auto;
+    .content-item {
+        height: 96.04px;
+        border-bottom: 1px solid #f4f4f4;
+        &:last-of-type {
+            border-bottom: 0;
+        }
+      .item-img {
+        width: 80px;
+        height: 80px;
+        padding: 8px;
+      }
+      .item-text {
+        width: calc(~"100% - 112px");
+        height: 80px;
+        background-color: #fff;
+        padding: 8px 8px 8px 2px;
+        position: relative;
+        .big-title {
+          font-size: 16px;
+        }
+        .small-title {
+          font-size: 12px;
+          color: #ccc;
+          margin-top: 2px;
+        }
+        .price {
+          font-size: 16px;
+          position: absolute;
+          bottom: 8px;
+          color: #ff4d2c;
+        }
+      }
+    }
+  }
+}

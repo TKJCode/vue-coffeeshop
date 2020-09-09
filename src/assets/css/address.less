@@ -1,0 +1,46 @@
+@import './global.less';
+
+.address, 
+.my-address {
+  // 修改 vant样式
+  /deep/ .van-icon,
+  /deep/ .van-nav-bar__text {
+    color: @color;
+  }
+  /deep/ .van-switch--on {
+    background-color: @color;
+  }
+  /deep/ .van-button--danger {
+    background-color: @color;
+    border-color: @color;
+  }
+  .van-address-item .van-radio__icon--checked .van-icon {
+    background-color: @color;
+    border-color: @color;
+    color: #fff;
+  }
+  /deep/ .van-icon-success {
+    color: #fff;
+  }
+  .van-tag--danger {
+    background-color: @color;
+  }
+  .van-radio__icon {
+    display: none;
+  }
+  .custom-image .van-empty__image {
+    width: 100px;
+    height: 100px;
+    margin-top: 60px;
+  }
+  .empty-text {
+    font-size: 16px;
+    color: #BFBFBF;
+    text-align: center;
+  }
+  .empty-link {
+    font-size: 20px;
+    color: @color;
+    text-align: center;
+  }
+}

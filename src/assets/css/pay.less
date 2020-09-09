@@ -1,0 +1,150 @@
+@import './global.less';
+
+.pay {
+  // 修改 vant样式
+  .van-nav-bar .van-icon,
+  .van-nav-bar__text,
+  .van-submit-bar__price {
+    color: @color;
+  }
+  .van-submit-bar__button--danger {
+    background: linear-gradient(to right, @color-light, @color);
+  }
+  
+  // 订单列表
+  .pay-content {
+    padding-bottom: 60px;
+    .selAddress {
+      width: calc(~"100% - 60px");
+      background-color: #fff;
+      margin: 15px;
+      border-radius: 5px;
+      padding: 0 15px;
+      .sel-icon {
+        height: calc(~"100% - 28px");
+        padding-top: 28px;
+        height: 100%;
+        .icon {
+          width: 24px;
+          height: 24px;
+          fill: currentColor;
+          overflow: hidden;
+        }
+      }
+      .sel-text {
+        width: calc(~"100% - 54px");
+        height: 100%;
+        margin: 10px 15px;
+        .person-info {
+          .info-name {
+            font-size: 16px;
+            color: #000;
+          }
+          .info-tel {
+            margin-left: 5px;
+            color: #999;
+          }
+        }
+        .info-address {
+          width: 100%;
+          margin-top: 5px;
+          font-size: 13px;
+          color: #444;
+          white-space:pre-wrap;
+        }
+        .info-remark {
+          margin-top: 5px;
+          color: @color;
+        }
+      }
+    }
+    .content-list {
+      width: calc(~"100% - 30px");
+      margin: 15px;
+      background-color: #fff;
+      border-radius: 5px;
+      .goods-info {
+        width: calc(~"100% - 31px");
+        padding: 15px;
+        .info-img {
+          width: 60px;
+          height: 60px;
+          border: 0.5px solid #e5e5e5;
+        }
+        .info-text {
+          width: calc(~"100% - 72px");
+          height: 61px;
+          margin-left: 10px;
+          .text-left {
+            height: 100%;
+            position: relative;
+            .zh-name {
+              font-size: 16px;
+              color: #333;
+            }
+            .en-name {
+              font-size: 12px;
+              color: #999;
+              margin-top: 2px;
+            }
+            .rule {
+              font-size: 12px;
+              color: #999;
+              position: absolute;
+              bottom: 0;
+            }
+          }
+          .text-right {
+            height: 100%;
+            position: relative;
+            .right-price {
+              position: absolute;
+              top: 0;
+              right: 0;
+              color: #555;
+            }
+            .right-count {
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              color: #999;
+            }
+          }
+        }
+      }
+      .goods-price {
+        width: calc(~"100% - 20px");
+        height: 30px;
+        line-height: 30px;
+        padding: 5px;
+        .total {
+          font-size: 12px;
+          color: #999;
+        }
+        .price {
+          font-size: 18px;
+          color: @color;
+        }
+      }
+    }
+  }
+
+  // 弹出层
+  .popup {
+    min-height: 300px;
+    max-height: 450px;
+
+    // 修改 vant样式
+    .van-address-item .van-radio__icon--checked .van-icon,
+    .van-button--danger {
+      background-color: @color;
+      border-color: @color;
+    }
+    .van-tag--danger {
+      background-color: @color;
+    }
+    .van-address-item__edit {
+      display: none;
+    }
+  }
+}

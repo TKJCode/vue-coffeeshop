@@ -1,0 +1,122 @@
+@import './global.less';
+
+.detail {
+    overflow-y: auto;
+    padding-top: 44px;
+    // 顶部导航栏
+    .top-nav {
+        // 修改 vant样式
+        .van-nav-bar__text, .van-icon {
+            color: @color;
+        }
+        .van-ellipsis {
+            font-size: 18px;
+        }
+        
+    }
+
+    // 商品大图
+    // .detail-img {
+
+    // }
+
+    // 商品详情
+    .detail-content {
+        background-color: #fff;
+        .goods-title {
+            border-bottom: 1px dashed #e5e5e5;
+            .goods-name {
+                font-size: 18px;
+                color: @color;
+                margin: 20px;
+            }
+            .goods-collect {
+                width: 24px;
+                height: 24px;
+                margin-top: 20px;
+                margin-right: 20px;
+            }
+        }
+    }
+
+    // 商品规格
+    .goods-spec {
+        margin-top: 20px;
+        border-bottom: 1px dashed #e5e5e5;
+        .spec-box {
+            margin-top: 15px;
+            &:last-of-type {
+                margin-bottom: 20px;
+            }
+            .spec-title {
+                width: 40px;
+                margin-left: 20px;
+                font-size: 16px;
+                color: #444;
+                line-height: 35px;
+                margin-right: 10px;
+            }
+            .spec-tags {
+                .tag-item {
+                    width: 80px;
+                    height: 35px;
+                    background-color: #E5E5E5;
+                    border-radius: 20px;
+                    color: #555;
+                    text-align: center;
+                    line-height: 35px;
+                    margin-left: 20px;
+                    font-size: 13px;
+                    &.active {
+                        background-color: @color;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    // 商品描述
+    .goods-desc {
+        margin-top: 20px;
+        border-bottom: 1px dashed #e5e5e5;
+        .desc-title {
+            margin-left: 20px;
+            font-size: 16px;
+            color: #000;
+        }
+        .desc-content {
+            .desc-item {
+                margin: 10px 20px;
+                font-size: 13px;
+                color: #555;
+            }
+        }
+    }
+
+    // 商品金额和数量
+    .goods-priNum {
+        margin-top: 4px;
+        height: 44px;
+        line-height: 44px;
+        .goods-price {
+            margin-left: 20px;
+            margin-bottom: 64px;
+            color: @color;
+            font-size: 18px;
+        }
+        .goods-number {
+            margin-right: 20px;
+        }
+
+        // 修改 vant样式
+        .van-stepper--round .van-stepper__plus {
+            background-color: @color;
+        }
+        .van-stepper--round .van-stepper__minus {
+            border-color: @color;
+            color: @color;
+        }
+    }
+}

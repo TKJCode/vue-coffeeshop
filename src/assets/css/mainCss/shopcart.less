@@ -1,0 +1,198 @@
+@import '../global.less';
+
+.emptyPage {
+
+  // 修改 vant样式
+  .van-empty__description {
+    font-size: 16px;
+  }
+
+  /deep/ .van-empty__image {
+    width: 250px;
+    height: 250px;
+  }
+
+  // 热门推荐
+  .hot-recom {
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 70px;
+    overflow-y: auto;
+    .hot-title {
+      height: 28px;
+      line-height: 28px;
+      padding-top: 10px;
+      .line {
+        width: 4px;
+        height: 18px;
+        background-color: @color;
+        margin: 5px 10px 5px 15px;
+      }
+      .text {
+        font-size: 18px;
+        color: #333;
+      }
+    }
+      .goods-item {
+        width: calc(~"(100% - 64px)/2");
+        margin: 10px 15px;
+        border: .5px solid #e1e1e1;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        .item-img {
+          width: 100%;
+          height: 100%;
+          margin: 0 auto;
+        }
+        .item-text {
+          margin: 0 7.5px;
+          .item-name {
+            margin-top: 5px;
+            margin-left: 5px;
+            .text-name {
+              width: 100%;
+              font-size: 16px;
+              color: #444;
+              font-weight: bold;
+              line-height: 30px;
+            }
+            .text-enname {
+              width: 90%;
+              font-size: 12px;
+              color: #999;
+              line-height: 30px;
+              margin-top: -10px;
+            }
+          }
+          .text-price {
+            margin: -2px 5px 8px 0;;
+            color: @color;
+            font-size: 16px;
+          }
+        }
+      }
+    
+  }
+}
+
+.shopcartPage {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 100px;
+  background-color: #F7F7F7;
+  overflow-y: auto;
+  padding-top: 44px;
+  .top-nav {
+
+    // 修改 vant样式
+    /deep/ .van-hairline--bottom {
+      height: 44px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    .van-nav-bar__text {
+      color: @color;
+      font-size: 16px;
+    }
+
+  }
+
+  .goods-list {
+    width: 100%;
+    height: calc(~"100% - 44px");
+    .van-swipe-cell {
+      border-bottom: 1px solid #e8e8e8;
+    }
+    .van-swipe-cell:last-of-type {
+      border: 0;
+    }
+    .van-button {
+      height: 100%;
+    }
+    .list-item {
+      width: 100%;
+      height: 100px;
+      background-color: #fff;
+      .item-checkBox {
+        width: 40px;
+        height: 100%;
+
+        // 修改 vant样式
+        /deep/ .checkOne {
+          margin-left: 10px;
+          margin-top: 40px;
+        }
+      }
+
+      .item-info {
+        width: calc(~"100% - 40px");
+        height: 100%;
+        .info-img {
+          width: 80px;
+          height: 80px;
+          // background-color: #000;
+          margin: 10px 0 10px 0;
+        }
+        .info-text {
+          width: calc(~"100% - 80px");
+          height: 100%;
+          .text-top {
+            height: 30px;
+            margin: 10px;
+            .big-name {
+              font-size: 18px;
+              margin-right: 10px;
+            }
+            .sm-name {
+              font-size: 12px;
+              color: #C6C6C6;
+            }
+            .enname {
+              color: #555;
+              margin-top: 5px;
+            }
+          }
+          .text-bottom {
+            width: 100%;
+            height: calc(~"100% - 55px");
+            .bottom-price {
+              margin-left: 10px;
+              position: absolute;
+              bottom: 10px;
+              font-size: 18px;
+              color: @color;
+            }
+            .bottom-number {
+              position: absolute;
+              bottom: 10px;
+              right: 10px;
+              // 修改 vant样式
+              .van-stepper--round .van-stepper__plus {
+                background-color: @color;
+              }
+              .van-stepper--round .van-stepper__minus {
+                  border-color: @color;
+                  color: @color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .van-submit-bar {
+    width: 100%;
+    position: fixed;
+    bottom: 50px;
+    left: 0;
+  }
+
+  .remove-list .van-checkbox {
+    position: fixed;
+    left: 16px;
+  }
+  
+  /deep/ .van-submit-bar__button--danger {
+    background-image: linear-gradient(to right, @color-light, @color);
+  }
+}

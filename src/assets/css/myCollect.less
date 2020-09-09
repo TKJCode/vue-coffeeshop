@@ -1,0 +1,75 @@
+@import './global.less';
+
+.myCollect {
+  .top-nav {
+    // 修改 vant样式
+    .van-nav-bar .van-icon,
+    .van-nav-bar__text {
+      color: @color;
+    }
+  }
+  
+  // 收藏栏
+  .collect {
+    width: 100%;
+    padding: 46px 0 20px 0;
+    .collect-item {
+      width: calc(~"100% - 30px");
+      margin: 15px 15px 0 15px;
+      .goods-item {
+        width: calc(~"(100% - 19px)/2");
+        background-color: #fff;
+        margin-bottom: 15px;
+        border: 1px solid #e5e5e5;
+        &:nth-of-type(2n) {
+          margin-left: 15px;
+        }
+        .item-img {
+          width: calc(~"100% - 20px");
+          height: 100%;
+          margin: 10px 10px 0 10px;
+        }
+        .item-text {
+          margin: 0 10px 10px 10px;
+          .text-top {
+            margin-top: 5px;
+            .zh-name {
+              font-size: 16px;
+              color: #333;
+            }
+            .en-name {
+              font-size: 12px;
+              color: #999;
+              margin-top: 2px;
+            }
+          }
+          .text-bottom {
+            height: 20px;
+            margin-top: 10px;
+            font-size: 16px;
+            .price {
+              color: @color;
+            }
+            .del-icon {
+              margin-top: 2px;
+            }
+          }
+        }
+      }
+    }
+    
+  }
+  .custom-image .van-empty__image {
+    width: 100px;
+    height: 100px;
+    margin-top: 120px;
+  }
+  .empty-text {
+    font-size: 16px;
+    color: #BFBFBF;
+  }
+  .empty-link {
+    font-size: 20px;
+    color: @color;
+  }
+}
